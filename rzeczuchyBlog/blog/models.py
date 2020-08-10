@@ -6,3 +6,6 @@ class Post(models.Model):
     published_time = models.DateTimeField('published at')
     author = models.CharField(max_length=50)
     main_content = models.TextField(max_length=2500)
+
+    def __str__(self):
+        return self.title
