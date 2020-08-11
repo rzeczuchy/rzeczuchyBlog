@@ -9,6 +9,12 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'blog/style.css' %}"
+    />
     <title>rzeczuchyBlog</title>
   </head>
   <body>
@@ -18,24 +24,22 @@
       </nav>
     </header>
     <main>
-      {% block content %}
-        {% if post_list %}
-            {% for post in post_list %}
-                <div class="card mb3">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ post.title }}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{{ post.published_time }}</h6>
-                        <p class="card-text">{{ post.main_content }}</p>
-                        <p class="card-text">
-                            <small class="text-muted">{{ post.author }}</small>
-                        </p>
-                    </div>
-                </div>
-            {% endfor %}
-            {% else %}
-            <p>No posts to display.</p>
-        {% endif %}
-      {% endblock %}
+      {% block content %} {% if post_list %} {% for post in post_list %}
+      <div class="card mb3">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            {{ post.published_time }}
+          </h6>
+          <p class="card-text">{{ post.main_content }}</p>
+          <p class="card-text">
+            <small class="text-muted">{{ post.author }}</small>
+          </p>
+        </div>
+      </div>
+      {% endfor %} {% else %}
+      <p>No posts to display.</p>
+      {% endif %} {% endblock %}
     </main>
   </body>
 </html>
