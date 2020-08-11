@@ -24,22 +24,44 @@
       </nav>
     </header>
     <main>
-      {% block content %} {% if post_list %} {% for post in post_list %}
-      <div class="card mb3">
-        <div class="card-body">
-          <h5 class="card-title">{{ post.title }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            {{ post.published_time }}
-          </h6>
-          <p class="card-text">{{ post.main_content }}</p>
-          <p class="card-text">
-            <small class="text-muted">{{ post.author }}</small>
-          </p>
+
+      <div class="custom-container">
+
+      <div class="sidebar">
+        <img
+          src="{% static 'blog/images/icon.png' %}"
+          alt="Blog icon"
+          class="sidebar-image"
+        />
+        <p class="sidebar-text">
+          Welcome to the rzeczuchy blog. This is just some text in the sidebar.
+        </p>
+        <p>Links:</p>
+        <ul class="sidebar-links">
+          <li class="sidebar-link"><a href="#">Link</a></li>
+          <li class="sidebar-link"><a href="#">Link</a></li>
+          <li class="sidebar-link"><a href="#">Link</a></li>
+        </ul>
+      </div>
+        <div class="post-list">
+          {% block posts %} {% if post_list %} {% for post in post_list %}
+          <div class="card mb3">
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                {{ post.published_time }}
+              </h6>
+              <p class="card-text">{{ post.main_content }}</p>
+              <p class="card-text">
+                <small class="text-muted">{{ post.author }}</small>
+              </p>
+            </div>
+          </div>
+          {% endfor %} {% else %}
+          <p>No posts to display.</p>
+          {% endif %} {% endblock %}
         </div>
       </div>
-      {% endfor %} {% else %}
-      <p>No posts to display.</p>
-      {% endif %} {% endblock %}
     </main>
   </body>
 </html>
