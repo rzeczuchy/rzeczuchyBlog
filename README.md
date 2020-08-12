@@ -1,6 +1,43 @@
 # rzeczuchyBlog
 Repository for the rzeczuchyBlog app.
 
+## Starting app using Pipenv
+For this method you need [Pipenv] (https://pypi.org/project/pipenv/). This the workflow I used and what I would recommend for running the app.
+
+To run the app, clone the repository. In the repository folder (where `Pipfile` is located) install packages using Pipenv:
+```
+$ pipenv install
+```
+
+Activate the Pipenv shell:
+```
+$ pipenv shell
+```
+
+Once the Pipenv shell is activated, go from the root to the rzeczuchyBlog folder, where the `manage.py` file is located.
+
+From there you will need to run the migrations:
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Once the migrations are completed, you can start the app using:
+```
+python manage.py runserver
+```
+
+The development server should by default start at port 8000. You can specify a different port like so:
+```
+python manage.py runserver [port]
+```
+
+To access the admin area, you will need to create the superuser with:
+```
+python manage.py createsuperuser
+```
+
+## Notices
 This app makes use of the Django framework for Python:
 https://github.com/django/django
 
