@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'blog/css/style.css' %}"
+    />
+    <title>rzeczuchyBlog</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand">rzeczuchyBlog</span>
+      </nav>
+    </header>
+    <main>
+      <div class="custom-container">
+        <div class="sidebar">
+          <img
+            src="{% static 'blog/images/icon.png' %}"
+            alt="Blog icon"
+            class="sidebar-image"
+          />
+          <p class="sidebar-text">
+            Welcome to the rzeczuchy blog. This is just some text in the
+            sidebar.
+          </p>
+          <p>Links:</p>
+          <ul class="sidebar-links">
+            <li class="sidebar-link"><a href="#">Link</a></li>
+            <li class="sidebar-link"><a href="#">Link</a></li>
+            <li class="sidebar-link"><a href="#">Link</a></li>
+          </ul>
+        </div>
+        <div class="main-content">
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
