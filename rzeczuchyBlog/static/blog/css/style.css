@@ -12,7 +12,7 @@ main .custom-container {
   margin: 30px 50px;
   display: flex; }
   main .custom-container .sidebar {
-    min-width: 200px;
+    width: 200px;
     margin-right: 50px; }
     main .custom-container .sidebar-image {
       width: 100%;
@@ -21,6 +21,8 @@ main .custom-container {
       margin-bottom: 15px; }
     main .custom-container .sidebar-links {
       list-style-type: none; }
+  main .custom-container .main-content {
+    width: 100%; }
 main .main-post-content {
   text-align: justify; }
 
@@ -33,6 +35,9 @@ main .main-post-content {
       position: inherit; }
       main .custom-container .sidebar-image {
         width: 100px; }
+      main .custom-container .sidebar-links li {
+        display: inline;
+        margin: 5px; }
     main .custom-container .post-list {
       margin-left: 0; } }
 

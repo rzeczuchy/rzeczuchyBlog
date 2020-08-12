@@ -19,7 +19,7 @@ main {
     display: flex;
 
     .sidebar {
-      min-width: 200px;
+      width: 200px;
       margin-right: 50px;
 
       &-image {
@@ -30,8 +30,12 @@ main {
       }
 
       &-links {
-          list-style-type: none;
+        list-style-type: none;
       }
+    }
+
+    .main-content {
+      width: 100%;
     }
   }
 
@@ -43,17 +47,24 @@ main {
 @media (max-width: 700px) {
   main {
     .custom-container {
-        display: block;
-        text-align: center;
+      display: block;
+      text-align: center;
 
-        .sidebar {
-            width: 100%;
-            position: inherit;
-      
-            &-image {
-              width: 100px;
-            }
+      .sidebar {
+        width: 100%;
+        position: inherit;
+
+        &-image {
+          width: 100px;
+        }
+
+        &-links {
+          li {
+            display: inline;
+            margin: 5px;
           }
+        }
+      }
 
       .post-list {
         margin-left: 0;
