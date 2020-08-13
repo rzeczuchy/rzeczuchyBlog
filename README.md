@@ -18,7 +18,6 @@ Once the Pipenv shell is activated, go from the root to the `rzeczuchyBlog` fold
 
 From there you will need to run the migrations:
 ```
-python manage.py makemigrations
 python manage.py migrate
 ```
 
