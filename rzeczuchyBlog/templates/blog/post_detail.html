@@ -2,16 +2,21 @@
 {% block content %}
     <div class="card mb-3">
     <div class="card-body">
-        <h5 class="card-title">
-        <a href="{% url 'blog:post-detail' post.pk %}">{{ post.title }}</a>
-        </h5>
-        <h6 class="card-subtitle mb-2 text-muted">
-        {{ post.published_time }}
+        <h2 class="card-title">
+        {{ post.title }}
+        </h2>
+
+        <h6 class="card-subtitle mb-3 text-muted">
+        {{ post.published_time }} by {{ post.author }}
         </h6>
-        <p class="card-text main-post-content">{{ post.main_content|safe }}</p>
-        <p class="card-text">
-        <small class="text-muted">{{ post.author }}</small>
-        </p>
+
+        <div class="text-left mb-3">
+        <p class="card-text">{{ post.main_content|safe }}</p>
+        </div>
+
+        <script>
+            document.write('<a href="' + document.referrer + '">Back to post list</a>');
+        </script>
     </div>
     </div>
 {% endblock %}

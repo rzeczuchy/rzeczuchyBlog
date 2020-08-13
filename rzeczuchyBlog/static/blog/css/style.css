@@ -5,17 +5,16 @@
 
 body,
 html {
-  font-family: "Arial", sans-serif;
   min-height: 100%; }
 
 main .custom-container {
   margin: 30px 50px;
   display: flex; }
   main .custom-container .sidebar {
-    width: 200px;
+    width: 150px;
     margin-right: 50px; }
     main .custom-container .sidebar-image {
-      width: 100%;
+      width: 150px;
       height: auto;
       border-radius: 50%;
       margin-bottom: 15px; }
@@ -23,8 +22,6 @@ main .custom-container {
       list-style-type: none; }
   main .custom-container .main-content {
     width: 100%; }
-main .main-post-content {
-  text-align: justify; }
 
 @media (max-width: 700px) {
   main .custom-container {
