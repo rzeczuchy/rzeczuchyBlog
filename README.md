@@ -2,7 +2,7 @@
 Repository for the rzeczuchyBlog app.
 
 ## Starting app using Pipenv
-For this method you'll need [Pipenv](https://pypi.org/project/pipenv/). This the workflow I'd recommend for running the app.
+For this method you'll need [Pipenv](https://pypi.org/project/pipenv/). This is the workflow I'd recommend for running the app.
 
 To run the app, clone the repository. In the root folder (where `Pipfile` is located) install packages using Pipenv:
 ```
