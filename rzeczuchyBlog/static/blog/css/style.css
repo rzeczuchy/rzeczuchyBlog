@@ -7,21 +7,35 @@ body,
 html {
   min-height: 100%; }
 
-main .custom-container {
-  margin: 30px 50px;
-  display: flex; }
-  main .custom-container .sidebar {
-    width: 150px;
-    margin-right: 50px; }
-    main .custom-container .sidebar-image {
+header .navbar {
+  padding: 0.5rem 0; }
+  header .navbar .nav-container {
+    margin: 0 50px;
+    width: 100%;
+    display: block; }
+    header .navbar .nav-container .nav-inner {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto; }
+
+main {
+  margin: 50px; }
+  main .custom-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex; }
+    main .custom-container .sidebar {
       width: 150px;
-      height: auto;
-      border-radius: 50%;
-      margin-bottom: 15px; }
-    main .custom-container .sidebar-links {
-      list-style-type: none; }
-  main .custom-container .main-content {
-    width: 100%; }
+      margin-right: 50px; }
+      main .custom-container .sidebar-image {
+        width: 150px;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 15px; }
+      main .custom-container .sidebar-links {
+        list-style-type: none; }
+    main .custom-container .main-content {
+      width: 100%; }
 
 @media (max-width: 700px) {
   main .custom-container {

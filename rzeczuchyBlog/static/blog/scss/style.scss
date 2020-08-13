@@ -10,9 +10,30 @@ html {
   min-height: 100%;
 }
 
+header {
+  .navbar {
+    padding: 0.5rem 0;
+
+    .nav-container {
+      margin: 0 50px;
+      width: 100%;
+      display: block;
+
+      .nav-inner {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+      }
+    }
+  }
+}
+
 main {
+  margin: 50px;
+
   .custom-container {
-    margin: 30px 50px;
+    max-width: 1000px;
+    margin: auto;
     display: flex;
 
     .sidebar {

@@ -20,7 +20,21 @@
   <body>
     <header>
       <nav class="navbar navbar-dark bg-dark">
-        <a href="{% url 'blog:index' %}" class="navbar-brand">rzeczuchyBlog</a>
+        <div class="nav-container">
+          <div class="nav-inner d-flex justify-content-between">
+            <a href="{% url 'blog:index' %}" class="navbar-brand">
+              rzeczuchyBlog
+            </a>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="{% url 'blog:index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <main>

@@ -1,22 +1,22 @@
 {% extends 'blog/shared.html' %}
 {% block content %}
     <div class="card mb-3">
-    <div class="card-body">
-        <h2 class="card-title">
-        {{ post.title }}
-        </h2>
+        <div class="card-body">
+            <h2 class="card-title">
+            {{ post.title }}
+            </h2>
 
-        <h6 class="card-subtitle mb-3 text-muted">
-        {{ post.published_time }} by {{ post.author }}
-        </h6>
+            <h6 class="card-subtitle mb-3 text-muted">
+            {{ post.published_time }} by {{ post.author }}
+            </h6>
 
-        <div class="text-left mb-3">
-        <p class="card-text">{{ post.main_content|safe }}</p>
+            <div class="text-left mb-3">
+            <p class="card-text">{{ post.main_content|safe }}</p>
+            </div>
+
+            <script>
+                document.write('<a href="' + document.referrer + '">Back to post list</a>');
+            </script>
         </div>
-
-        <script>
-            document.write('<a href="' + document.referrer + '">Back to post list</a>');
-        </script>
-    </div>
     </div>
 {% endblock %}
