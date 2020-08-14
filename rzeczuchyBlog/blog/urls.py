@@ -4,6 +4,7 @@ from .views import PostDetail
  
 app_name = 'blog'
 urlpatterns = [
-   path('', views.index, name="index"),
+   path('', views.index, name='index'),
    path('post/<int:pk>', PostDetail.as_view(), name='post-detail'),
+   path('about', views.about, name='about')
 ]

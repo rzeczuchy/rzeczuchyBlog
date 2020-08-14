@@ -14,3 +14,6 @@ def index(request):
 class PostDetail(DetailView):
    model = Post
    template_name = 'blog/post_detail.html'
+
+def about(request):
+   return render(request, 'blog/about.html')
