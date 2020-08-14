@@ -7,7 +7,8 @@
 
 body,
 html {
-  min-height: 100%;
+  position: relative;
+  min-height: 100vh;
 }
 
 header {
@@ -29,7 +30,7 @@ header {
 }
 
 main {
-  margin: 50px;
+  padding: 50px 50px 120px;
 
   .custom-container {
     max-width: 1000px;
@@ -56,6 +57,12 @@ main {
       width: 100%;
     }
   }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 @media (max-width: 700px) {

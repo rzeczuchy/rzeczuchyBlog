@@ -5,7 +5,8 @@
 
 body,
 html {
-  min-height: 100%; }
+  position: relative;
+  min-height: 100vh; }
 
 header .navbar {
   padding: 0.5rem 0; }
@@ -19,7 +20,7 @@ header .navbar {
       margin: auto; }
 
 main {
-  margin: 50px; }
+  padding: 50px 50px 120px; }
   main .custom-container {
     max-width: 1000px;
     margin: auto;
@@ -36,6 +37,11 @@ main {
         list-style-type: none; }
     main .custom-container .main-content {
       width: 100%; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
 
 @media (max-width: 700px) {
   main .custom-container {
