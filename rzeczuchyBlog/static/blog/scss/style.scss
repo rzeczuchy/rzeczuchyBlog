@@ -55,6 +55,12 @@ main {
 
     .main-content {
       width: 100%;
+
+      .pagination {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 }

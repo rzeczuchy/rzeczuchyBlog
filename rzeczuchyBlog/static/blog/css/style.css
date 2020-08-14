@@ -37,6 +37,10 @@ main {
         list-style-type: none; }
     main .custom-container .main-content {
       width: 100%; }
+      main .custom-container .main-content .pagination {
+        display: block;
+        width: 100%;
+        text-align: center; }
 
 footer {
   position: absolute;
