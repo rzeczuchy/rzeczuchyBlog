@@ -26,10 +26,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # If you did not create a `.env` file, a random key will be generated each time.
 # Of course this method cannot be used in production.
 # For more info, see : https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-try:
-    load_dotenv()
-    SECRET_KEY = str(os.getenv('SECRET_KEY'))
-except:
+
+load_dotenv()
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
+if SECRET_KEY == 'None':
     SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
