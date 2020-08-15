@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -20,7 +22,15 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@9zc7$mq44-7@h*-kn%_lmb6lh#6#0ab)s7681@weqkg$-iwj)'
+# My real secret key is pulled from a `.env` file, which I did not upload to Git.
+# If you did not create a `.env` file, a random key will be generated each time.
+# Of course this method cannot be used in production.
+# For more info, see : https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
+try:
+    load_dotenv()
+    SECRET_KEY = str(os.getenv('SECRET_KEY'))
+except:
+    SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

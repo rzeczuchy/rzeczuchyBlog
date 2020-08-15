@@ -42,3 +42,6 @@ https://github.com/django/django
 
 For rich-text editing, the Django CKEditor integration has been used:\
 https://github.com/django-ckeditor/django-ckeditor
+
+For storing environment variables, python-dotenv has been used:\
+https://github.com/theskumar/python-dotenv
